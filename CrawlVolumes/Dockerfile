@@ -3,5 +3,5 @@
 # VERSION 1.0
 
 FROM    busybox
-VOLUME  ["/dgldir", /crawl-master]
+VOLUME  ["/dgldir", "/crawl-master"]
 CMD     ["/bin/true"]
