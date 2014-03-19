@@ -27,6 +27,3 @@ WORKDIR dgamelaunch
 RUN ./autogen.sh --enable-debugfile --enable-sqlite --enable-shmem
 RUN make VIRUS=1
 RUN su -c 'make install'
-# make sure the crawl container is started first
-RUN /dgamelaunch-config/bin/dgl create-versions-db
-RUN /dgamelaunch-config/bin/dgl create-crawl-gamedir
