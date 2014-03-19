@@ -27,3 +27,4 @@ WORKDIR dgamelaunch
 RUN ./autogen.sh --enable-debugfile --enable-sqlite --enable-shmem
 RUN make VIRUS=1
 RUN su -c 'make install'
+RUN update-locale LANG=en_US.UTF-8
