@@ -31,3 +31,5 @@ WORKDIR /
 RUN update-locale LANG=en_US.UTF-8
 ADD init.sh /init.sh
 ENTRYPOINT ["/init.sh"]
+EXPOSE 8080
+

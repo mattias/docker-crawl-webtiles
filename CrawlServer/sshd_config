@@ -1,0 +1,32 @@
+#	$OpenBSD: sshd_config,v 1.89 2013/02/06 00:20:42 dtucker Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Port 22
+AddressFamily any
+ListenAddress 0.0.0.0
+Protocol 2
+PermitRootLogin no
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh/authorized_keys
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+PrintMotd no # pam does that
+UsePrivilegeSeparation sandbox		# Default for new installations.
+PermitTunnel no
+
+Match User crawl
+    AllowAgentForwarding no
+    AllowTcpForwarding no
+    X11Forwarding no
+    PasswordAuthentication yes  # only if you want to allow passwords

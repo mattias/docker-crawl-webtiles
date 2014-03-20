@@ -17,5 +17,6 @@ RUN mkdir -p /dgldir/data/{crawl-git-settings,crawl-0.13-settings,crawl-0.12-set
 RUN mkdir -p /var/www
 RUN mkdir -p /logs
 RUN mkdir -p /var/mail
-VOLUME  ["/dgldir", "/crawl-master", "/var/www", "/logs", "/var/mail"]
+RUN mkdir -p /usr/local/sbin
+VOLUME  ["/dgldir", "/crawl-master", "/var/www", "/logs", "/var/mail", "/usr/local/sbin"]
 CMD     ["/bin/true"]
