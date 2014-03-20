@@ -1,0 +1,15 @@
+server {
+	server_name mattias.afraid.org;
+	listen 80;
+
+	root /var/www;
+	
+	index index.html index.htm;
+	
+	access_log off;
+	error_log /var/log/nginx/mattias.afraid.org-error.log;
+
+	location / {
+        autoindex on;
+	}
+}

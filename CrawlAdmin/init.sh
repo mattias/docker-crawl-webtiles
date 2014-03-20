@@ -20,5 +20,4 @@ if [ ! -d "/crawl-master/crawl-git"]; then
     sqlite3 -line /dgldir/dgamelaunch.db 'CREATE TABLE dglusers (id integer primary key, username text, email text, env text, password text, flags integer);'
 fi
 
-/etc/init.d/webtiles start
-
+service webtiles start
